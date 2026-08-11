@@ -1,0 +1,48 @@
+function Hero() {
+    return (
+        <section style={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #0a0a0a 0%, #1a0000 100%)',
+        textAlign: 'center',
+        padding: '0 20px'
+    }}>
+        <h1 style={{
+            fontSize: 'clamp(2rem, 6vw, 5rem)',
+            background: 'linear-gradient(90deg, #e8001a, #ff6a00)',
+            backgroundClip: 'text',   
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            color: 'transparent',  
+            marginBottom: '20px'
+        }}>
+            NCEA — Брендинг, который работает
+        
+        </h1>
+
+        <p style={{ color: '#aaa', fontSize: '1.2rem', marginBottom: '40px' }}>
+            Создаём фирменный стиль, логотипы и визуальные идентичности
+        </p>
+
+        <button style={{
+        padding: '16px 40px',
+        background: 'linear-gradient(90deg, #e8001a, #ff6a00)',
+        border: 'none',
+        borderRadius: '4px',
+        color: 'white',
+        fontSize: '1rem',
+        fontWeight: 'bold',
+        cursor: 'pointer',
+        letterSpacing: '2px',
+        textTransform: 'uppercase'
+      }}>
+        Заказать услугу
+      </button>
+    </section>
+  )
+}
+
+export default Hero
