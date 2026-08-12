@@ -33,7 +33,7 @@ function About() {
             }}>
                 {['Логотип', 'Брендбук', 'Фирменный стиль'].map((item) => (
                     <div key={item} style={{
-                        background: 'var(--gray)',
+                        background: 'var(--grey)',
                         border: '1px solid var(--border)',
                         borderRadius: '8px',
                         padding: '30px',
