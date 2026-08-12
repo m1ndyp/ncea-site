@@ -11,13 +11,17 @@ function Hero() {
         padding: '0 20px'
     }}>
         <h1 style={{
-            fontSize: 'clamp(2rem, 6vw, 5rem)',
+            fontSize: 'clamp(1.8rem, 2.8vw, 3.5rem)',
             background: 'linear-gradient(90deg, #e8001a, #ff6a00)',
             backgroundClip: 'text',   
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             color: 'transparent',  
-            marginBottom: '20px'
+            marginBottom: '20px',
+            lineHeight: '1.2',
+            wordBreak: 'break-word',
+            maxWidth: '800px',
+            whiteSpace: 'nowrap',
         }}>
             NCEA — Брендинг, который работает
         
