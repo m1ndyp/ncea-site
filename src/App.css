@@ -4,6 +4,8 @@
   --orange: #ff6a00;
   --white: #ffffff;
   --gray: #1a1a1a;
+  --text-muted: #aaaaaa;
+  --border: #2a2a2a; 
 }
 
 * {

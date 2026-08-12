@@ -12,7 +12,7 @@ function Hero() {
     }}>
         <h1 style={{
             fontSize: 'clamp(1.8rem, 2.8vw, 3.5rem)',
-            background: 'linear-gradient(90deg, #e8001a, #ff6a00)',
+            background: 'linear-gradient(90deg, var(--red), var(--orange))',
             backgroundClip: 'text',   
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -27,13 +27,13 @@ function Hero() {
         
         </h1>
 
-        <p style={{ color: '#aaa', fontSize: '1.2rem', marginBottom: '40px' }}>
+        <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', marginBottom: '40px' }}>
             Создаём фирменный стиль, логотипы и визуальные идентичности
         </p>
 
         <button style={{
         padding: '16px 40px',
-        background: 'linear-gradient(90deg, #e8001a, #ff6a00)',
+        background: 'linear-gradient(90deg, var(--red), var(--orange))',
         border: 'none',
         borderRadius: '4px',
         color: 'white',
