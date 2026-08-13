@@ -8,8 +8,8 @@ function OrderForm() {
     message: ''
   })
 
-  // Состояние для отслеживания отправки формы
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleChange = (e) => {
     setFormData({
@@ -18,18 +18,37 @@ function OrderForm() {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('Отправлено:', formData)
+    setIsLoading(true)
 
-    setIsSubmitted(true)
-    
-    setFormData({
-      name: '',
-      email: '',
-      service: '',
-      message: ''
-    })
+    try {
+      const response = await fetch('http://localhost:8080/api/orders', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        console.log('Успешно сохранено в БД:', formData)
+        setIsSubmitted(true)
+        setFormData({
+          name: '',
+          email: '',
+          service: '',
+          message: ''
+        })
+      } else {
+        alert('Ошибка при отправке на сервер')
+      }
+    } catch (error) {
+      console.error('Ошибка подключения:', error)
+      alert('Не удалось подключиться к серверу бэкенда')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -113,8 +132,8 @@ function OrderForm() {
                 onChange={handleChange}
               />
 
-              <button type="submit" className="submit-btn">
-                Отправить заявку
+              <button type="submit" className="submit-btn" disabled={isLoading}>
+                {isLoading ? 'Отправка...' : 'Отправить заявку'}
               </button>
 
             </form>
