@@ -26,11 +26,7 @@ function About() {
                 NCEA создаёт визуальные идентичности для бизнеса любого масштаба.
                 Логотип, фирменный стиль, брендбук — всё что нужно чтобы тебя запомнили.
             </p>
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: '20px',
-            }}>
+            <div className="grid-3">
                 {['Логотип', 'Брендбук', 'Фирменный стиль'].map((item) => (
                     <div key={item} style={{
                         background: 'var(--grey)',

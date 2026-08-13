@@ -10,9 +10,9 @@ function Advantages() {
             <div style={{ maxWidth:'1000px', margin: '0 auto' }}>
                 
                 <h2 style={{
-                    fontSize: 'clamp(1.5rem, 3vm, 2.5rem',
+                    fontSize: 'clamp(1.5rem, 3vw, 2.5rem',
                     marginBottom: '40px',
-                    background: 'linear-gradient(90deg, var(--red), var(--orange)',
+                    background: 'linear-gradient(90deg, var(--red), var(--orange))',
                     WebkitBackgroundClip: 'text',
                     backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -21,11 +21,7 @@ function Advantages() {
                     Почему NCEA?
                 </h2>
 
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(2, 2fr)',
-                    gap: '20px'
-                }}>
+                <div className="grid-2">
                     {items.map((item) => (
                         <div key={item.title} style={{
                             background: 'var(--gray)',

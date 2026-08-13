@@ -24,11 +24,7 @@ function Portfolio() {
                     Примеры работ
                 </h2>
 
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(3, 1fr)',
-                    gap: '20px',
-                }}>
+                <div className="grid-3">
                     {works.map((work) => (
                         <div key={work.id} style={{
                             background: 'var(--black)',
