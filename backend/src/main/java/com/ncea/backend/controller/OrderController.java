@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/orders")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {"https://ncea-site.vercel.app", "http://localhost:5173"})
 public class OrderController {
     @Autowired
     private OrderService orderService;
