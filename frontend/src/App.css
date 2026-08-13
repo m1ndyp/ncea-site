@@ -92,3 +92,67 @@ button:hover {
 button:active {
   transform: scale(0.98);
 }
+
+.order-card {
+  background: linear-gradient(145deg, #141414, #0d0d0d);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.order-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--orange));
+}
+
+.custom-input {
+  width: 100%;
+  padding: 16px 18px;
+  background: #181818;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--white);
+  fontSize: 1rem;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-input:focus {
+  border-color: var(--orange);
+  background: #1f1f1f;
+  box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.15);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(90deg, var(--red), var(--orange));
+  border: none;
+  border-radius: 6px;
+  color: white;
+  fontSize: 1rem;
+  fontWeight: bold;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(232, 0, 26, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 106, 0, 0.4);
+  opacity: 0.95;
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
