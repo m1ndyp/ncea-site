@@ -22,8 +22,10 @@ function OrderForm() {
     e.preventDefault()
     setIsLoading(true)
 
+    const API_URL = "https://ncea-site-1.onrender.com";
+
     try {
-      const response = await fetch("https://ncea-site-xxxx.onrender.com/api/orders", {
+      const response = await fetch(`${API_URL}/api/orders`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
