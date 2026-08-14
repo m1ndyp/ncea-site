@@ -22,8 +22,8 @@ function OrderForm() {
     e.preventDefault()
     setIsLoading(true)
 
-    const API_URL = "https://ncea-site-1.onrender.com";
-
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+  
     try {
       const response = await fetch(`${API_URL}/api/orders`, {
         method: 'POST',
